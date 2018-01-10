@@ -45,7 +45,7 @@ public class CustomerController {
     }
 
     @RequestMapping(
-            value = "/customers/{id}",
+            value = "/customer/{id}",
             method = RequestMethod.PUT,
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE
@@ -56,7 +56,7 @@ public class CustomerController {
     }
 
     @RequestMapping(
-            value = "/customers/{id}",
+            value = "/customer/{id}",
             method = RequestMethod.DELETE,
             consumes = MediaType.APPLICATION_JSON_VALUE, //Dia consume dari client berupa Content Type
             produces = MediaType.APPLICATION_JSON_VALUE
@@ -64,5 +64,7 @@ public class CustomerController {
     public Customer remove(@PathVariable String id){
         return customerService.remove(id);
     }
+
+
 
 }
